@@ -1,0 +1,72 @@
+footer{
+	background: $darkgrey;
+	height: $footer-height;
+	width: 100%;
+	min-width: $container-width + rem(20px);
+	margin-top: -$footer-height;
+	position: relative;
+	@extend %clearfix;
+}
+.footer__left, .footer__right{
+	float:left;
+	width:50%;
+/*	height: 50px;*/
+}
+.footer__left{
+	color:#878787;
+	padding-top: rem(13.8px);
+	font-family:'fira_sansmedium';
+	@include tablets{
+	font-family:'fira_sanslight';	
+	text-align: left;
+	width:76%;
+
+}
+@include laptop{
+		font-size: rem(14px);
+	}
+}
+.footer__right{
+	@include tablets{
+	width: rem(120px);
+}
+}
+.socials__link{
+	@extend %clearfix;
+	vertical-align: right;
+	float:right;
+	@include tablets{
+	float:left;
+}
+}
+.socials__link_fb{
+	display: inline-block;
+	vertical-align: right;
+	background: url('img/footer/fb.png');
+	height: rem(30px);
+	width: rem(30px);
+	margin-top: rem(10px);
+	margin-right:rem(10px);
+  border-radius: rem(30px);
+}
+.socials__link_vk{
+	display: inline-block;
+	vertical-align: right;
+	background: url('img/footer/vk.png');
+	height: rem(30px);
+	width: rem(30px);
+	margin-top: rem(10px);
+	margin-right: rem(10px);
+  border-radius: rem(30px);
+}
+.socials__link_tw{
+	display: inline-block;
+	vertical-align: right;
+	background: url('img/footer/tw.png');
+	height: rem(30px);
+	width: rem(30px);
+	margin-top: rem(10px);
+	margin-right: rem(5px);
+  border-radius: rem(30px);
+}
+

@@ -1,0 +1,263 @@
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.empty{
+	height: $footer-height;
+}
+.container{
+	margin: 0 auto;
+	//width: $container-width;
+	max-width: rem(1000px);
+}
+.maincontent{
+	padding-bottom: rem(50px);
+}
+.sidebar,.page-content{
+	float:left;
+}
+.sidebar{
+	width: rem(220px);
+/*	height: rem(345px);*/
+@include tablets{
+	width: 100%;
+	float: none;
+	margin-bottom: rem(15px);
+	margin-top: rem(-45px);
+}
+}
+.nav__item{
+	@include tablets{
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav__list{
+	@include tablets{
+	text-align: left;
+}
+}
+}
+.page-content{
+	width: rem(700px);
+	@include tablets{
+	width: 100%;
+	float: none;
+}
+}
+.nav__link{
+	display: block;
+	border-right: rem(5px) solid transparent;
+	text-decoration: none;
+	color:$darkgrey;
+	padding: rem(10px) rem(20px) rem(10px) 0;
+	text-align: right;
+	font-family:'fira_sansmedium';
+	/*&:active {
+		border-color: $blue;
+		color:$blue;
+	}*/
+	&:hover {
+		color:$blue;
+		border-color: $blue;
+		@include tablets{
+	border:0 none;
+}
+	}
+	&:active{
+		color:$blue;
+		border-color: $blue;
+		font-weight: bold;
+		@include tablets{
+	border:0 none;
+}
+	}
+}
+.nav__link-text {
+	display: inline-block;
+	padding: rem(4px) 0 rem(4px) rem(10px);
+}
+.about__left{
+	float:left;
+	width: rem(280px);
+	/*height: rem(345px);	*/
+}
+.about__right{
+	float:right;
+	width: rem(390px);
+/*	height: rem(345px);*/	
+}
+.about__pic{
+	overflow: hidden;
+	border-radius:50%;
+	border: rem(5px) solid #fff;
+	display: inline-block;
+	width: rem(220px);
+	height: rem(220px);
+	margin-left:rem(25px);
+}
+.about__pic-img{
+	display: inline-block;
+	max-width: 100%;
+	max-height: 100%;
+}
+.title{
+	font-family:'fira_sansmedium';
+		font-size: rem(35px);
+	color: $darkgrey;
+	margin-bottom: rem(20px);
+}
+.about__desc {
+	p {
+		font-size: rem(18px);
+		color: #646464;
+		margin-top: 0;
+		margin-bottom: rem(15px);
+	}
+
+	h1 {
+
+	}
+
+	h2 {
+
+	}
+}
+
+.btn__icon{
+	transition: all .1s;
+	color:$red;
+	font-family:'fira_sansbold';
+	padding: rem(10px) rem(20px);
+	border: rem(3px) solid $red;
+	border-radius:rem(30px);
+	outline: 0;
+	cursor: pointer;
+	&:hover{
+		background: $red;
+		color:white;
+	}
+}
+.btn{
+	margin-top: rem(20px);
+	float:right;
+	text-decoration: none;
+}
+
+/* career */
+.career__item {
+	text-align: right;
+	&:first-child {
+		.career__block {
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	&:last-child {
+		.career__block {
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+.about_car__pic{
+	overflow: hidden;
+	border-radius:rem(8px);
+	display: inline-block;
+	width: rem(220px);
+	height: rem(220px);
+	margin-left:rem(25px);
+}
+.about_car__pic-img{
+	display: inline-block;
+	max-width: 100%;
+	/*max-height: 100%;*/
+}
+.career__title{
+	font-family:'fira_sansregular';
+	color:$darkgrey;
+	&:hover{
+		color:$white;
+	}
+}
+.career__block{
+	width:rem(300px);
+	background: white;
+	@include box-shadow(0 rem(1px) rem(3px) 0 rgba(#000,.2));
+	margin-bottom:rem(20px);
+	border-radius:rem(9px);
+	display: inline-block;
+	text-align: left;
+	position: relative;
+	padding: rem(20px);
+	font-family:'fira_sanslight';
+	color:$grey;
+	&:before, &:after {
+		content: "";
+		display: block;
+		width: rem(1px);
+		background: #dddddd;
+		position: absolute;
+		left: rem(-30px);
+	}
+	&:before {
+		top: 0;
+		bottom: 50%;
+		margin-bottom: rem(10px);
+	}
+
+	&:after {
+		bottom: rem(-22px);
+		top: 50%;
+		margin-top: rem(10px);
+	}
+		&:hover{
+	background: $blue;
+	color:$white;
+}
+}
+.career__year {
+	position: absolute;
+	right: 100%;
+	top: 50%;
+	color:$grey;
+	line-height: rem(30px);
+	margin-top: rem(-15px);
+	margin-right: rem(38px);
+
+	&:after {
+		content: "";
+		width: rem(10px);
+		height: rem(10px);
+		background: $blue;
+		border-radius: 50%;
+		position: absolute;
+		right: rem(-14px);
+		top: 50%;
+		margin-top: rem(-5px);
+		z-index: 1;
+	}
+}
+
+/*.career__block:hover{
+	background: $blue;
+	color:$white;
+}*/
+
+.career__list{
+	width: rem(400px);
+	height: rem(345px);
+	/*margin-top:52px;*/
+	margin-left: rem(40px);
+/*	overflow: scroll;*/
+}
+.about__title{
+	font-family:'fira_sansmedium';
+		font-size: rem(30px);
+	color: $darkgrey;
+	margin-bottom: rem(10px);
+	margin-left:rem(25px);
+}

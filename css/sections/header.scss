@@ -1,0 +1,49 @@
+.header{
+	background: #fff;
+	@include box-shadow(0 rem(1px) rem(3px) 0 rgba(#000,.2));
+	@extend %clearfix;
+	@include fira(bold);
+	margin-bottom: 1.25rem;
+}
+
+.header__left, .header__right{
+	float:left;
+	width:50%;
+	height: 5rem;
+}
+.contacts__link{
+color: $blue;
+	text-decoration: none;
+	font-size: rem(17px);
+	background: url('img/header/dot.png') 0 bottom repeat-x;
+	padding-top: rem(26.8px);
+}
+.contacts {
+	@extend %clearfix;
+	vertical-align:middle;
+	text-align: right;
+	padding-top: rem(26.8px);
+}
+
+.user__avatar {
+	display: inline-block;
+	vertical-align:middle;
+	width: rem(60px);
+	height: rem(60px);
+	background: url('img/header/avatar.jpg');
+	border:rem(1px) solid #bebebe;
+	border-radius: rem(30px);
+}
+
+
+.user__username{
+	display: inline-block;
+	vertical-align:middle;
+	padding-left:rem(20px);
+	color:$darkgrey;
+	font-size:1.2rem;
+	font-family:'fira_sansregular';
+}
+.user{
+	padding-top: 0.6rem;
+}
